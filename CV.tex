@@ -8,49 +8,74 @@
 
 \documentclass[11pt,a4paper]{article}
 
+% -----------------------------
 % Page setup
+% -----------------------------
 \usepackage[a4paper,margin=0.4in]{geometry}
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
 \thispagestyle{empty}
 
+% -----------------------------
 % Basic formatting
+% -----------------------------
 \usepackage{mdwlist}
 \usepackage{fix-cm}
 \usepackage{textcomp}
 \usepackage{multicol}
-\usepackage{enumitem}
 \usepackage{tabto}
 \setlength{\tabcolsep}{0em}
 
+% List spacing
+\usepackage{enumitem}
+\setlist[itemize]{noitemsep, topsep=0.4em, leftmargin=*}
+\setlist[enumerate]{noitemsep, topsep=0.4em, leftmargin=*}
+\setlength{\parskip}{0pt}
+
+% -----------------------------
 % Fonts and colors
+% -----------------------------
 \usepackage{tgpagella}
 \usepackage[scaled]{helvet}
 \usepackage{fontawesome}
 \usepackage{xcolor}
 \renewcommand\familydefault{\sfdefault}
 
+% -----------------------------
 % Links
+% -----------------------------
 \usepackage{hyperref}
+\hypersetup{
+    linkcolor=black
+}
 
-% Custom section environments
+% -----------------------------
+% Section spacing
+% -----------------------------
+\usepackage{titlesec}
+\titlespacing*{\section}{0pt}{1em}{0.4em}
+\titlespacing*{\subsection}{0pt}{0.8em}{0.3em}
+
+% -----------------------------
+% Custom environments
+% -----------------------------
 \newenvironment{indentsection}[1]
 {
-    \begin{list}{}
-        {\setlength{\leftmargin}{#1}}
-        \item[]
+    \begin{list}{}{\setlength{\leftmargin}{#1}}
+    \item[]
 }
 {\end{list}}
 
 \newenvironment{unindentsection}[1]
 {
-    \begin{list}{}
-        {\setlength{\leftmargin}{-0.15#1}}
-        \item[]
+    \begin{list}{}{\setlength{\leftmargin}{-0.15#1}}
+    \item[]
 }
 {\end{list}}
 
-% Format two pieces of text, one left aligned and one right aligned
+% -----------------------------
+% Header row (left + right aligned)
+% -----------------------------
 \newcommand{\headerrow}[2]
 {
     \begin{tabular*}{\linewidth}{l@{\extracolsep{\fill}}r}
@@ -62,7 +87,7 @@
 \begin{document}
 
 \begin{center}
-    {\huge Mihai-Cristian \textbf{Farcaș}} \\ \vspace{5pt}
+    {\huge Mihai-Cristian Farcaș} \\ \vspace{0.5pt}
     \color{black}
     \ \faicon{at} \href{mailto:mihaifarcas125@gmail.com}{mihaifarcas125@gmail.com}
     \ \faicon{globe} \href{https://forquosh.dev}{forquosh.dev}
@@ -70,14 +95,10 @@
     \ \faicon{linkedin} \href{https://www.linkedin.com/in/mihai-cristian-farcaș-6660542a6/}{linkedin.com/in/mihai-cristian-farcaș}
 \end{center}
 
-\hrule
+\vspace{-1em}
 
-\vspace{1.5pt}
 \subsection*{EDUCATION}
-\vspace{1.5pt}
-
 \begin{itemize}[leftmargin=*]
-    \parskip=0.5em
 
     \item
     \headerrow
@@ -98,101 +119,88 @@
         {\emph{Sept 2019 - June 2023}}
 \end{itemize}
 
-% \hrule
-
-% \subsection*{EXPERIENCE}
-% \vspace{1.5pt}
-
-% \begin{itemize*}
-%         \vspace{-0.5em}
-%         \item TODO
-% \end{itemize*}
-
-\hrule
-
-\subsection*{PERSONAL PROJECTS}
-\vspace{1.5pt}
+\subsection*{EXPERIENCE}
 
 \begin{itemize}[leftmargin=*]
-    \parskip=0.5em
+    \item
+    \headerrow
+        {\textbf{\href{https://www.tvarita.ro}{Tvarita}}}
+        {\textbf{Software Internship}}
+    \headerrow
+        {\emph{Website Redesign}}
+        {\emph{April - June 2025}}
+    \begin{itemize*}
+        \item Fully redesigned and optimized a servers' monitoring website for a network of opticians' clinics using React, Tailwind CSS and shadcn-ui as the main frontend technologies, resulting in a better user experience and faster load/response times.
+    \end{itemize*}
+    \item
+    \headerrow
+        {\textbf{Cora Holz Design}}
+        {\textbf{Part-Time Job}}
+    \headerrow
+        {\emph{Data Operation and Validation}}
+        {\emph{November 2023 - Present}}
+    \begin{itemize*}
+        \item Ensured accuracy and integrity of worker data — including salaries, bonuses, deductions, and leave days — using Excel workflows, resulting in streamlined data management, improved visualization, faster operations and more reliable reporting.
+    \end{itemize*}
+\end{itemize}
 
+\subsection*{PERSONAL PROJECTS}
+
+\begin{itemize}[leftmargin=*]
+    \item
+    \headerrow
+        {\textbf{\href{https://github.com/Forquosh/https://github.com/Forquosh/Worksite-Management-Studio-Online}{Worksite Management Studio Online}}}
+        {\textbf{April 2025}}
+    \begin{itemize*}
+        \item Developed a full-stack web application for real-time construction site and workforce management using React, Go and PostgreSQL, featuring geolocation-based worksite tracking, role-based user access/management and interactive analytics dashboards, resulting in improved overall operational oversight, project coordination and enhanced decision-making through data visualization.
+    \end{itemize*}
     \item
     \headerrow
         {\textbf{\href{https://github.com/Forquosh/portfolio-website}{Personal Portfolio Website}}}
         {\textbf{January 2025}}
     \begin{itemize*}
-        \vspace{-0.5em}
-        \item Built a modern, responsive, full-stack personal portfolio website featuring blog posting and personal projects presentation using Next.js 15, TypeScript, Tailwind CSS and MDX, resulting in a clean and easy-to-navigate digital medium through which I showcase my work, achievements and hobbies.
+        \item Built a modern, responsive, full-stack personal portfolio website featuring blog posting and personal projects presentation using Next.js 15, Typescript, Tailwind CSS and MarkdownX, resulting in a clean and easy-to-navigate digital medium through which I showcase my work, achievements and hobbies.
     \end{itemize*}
-
     \item
     \headerrow
         {\textbf{\href{https://github.com/Forquosh/}{Generative Pretrained Transformer}}}
         {\textbf{December 2024}}
     \begin{itemize*}
-        \vspace{-0.5em}
-        \item Successfully replicated the GPT architecture from scratch using Jupyter Notebooks, PyTorch and Pickle, resulting in a fully functional model capable of training on large and various datasets and responding accordingly to each given situation.
+        \item Successfully replicated the GPT architecture from scratch using Jupyter Notebooks, PyTorch and Pickle, resulting in a fully functional model capable of training on large and various datasets and responding accordingly to any given input.
     \end{itemize*}
-
     \item
     \headerrow
         {\textbf{\href{https://github.com/Forquosh/LaMiniT5-Langchain-FAISS-RAG}{Large Language Model Chatbot}}}
         {\textbf{November 2024}}
     \begin{itemize*}
-        \vspace{-0.5em}
         \item Successfully implemented a lightweight LLM chatbot for PDF documents through RAG (retrieval-augmented generation) using LangChain for document processing and retrieval, FAISS for vector storage and Hugging Face's transformers library, resulting in a highly-efficient, easy-to-use and fully open-source personal assistant for data studying and key information retrieval.
-    \end{itemize*}
-
-    \item
-    \headerrow
-        {\textbf{\href{https://github.com/Forquosh/My-Git}{Git Implementation}}}
-        {\textbf{October 2024}}
-    \begin{itemize*}
-        \vspace{-0.5em}
-        \item Reimplemented the key functionalities of Git for learning purposes, using Python, resulting in an efficient, basic "copy" of the great version control program.
     \end{itemize*}
 \end{itemize}
 
-\hrule
-
 \subsection*{LEADERSHIP AND AWARDS}
-\vspace{1.5pt}
 
 \begin{itemize*}
-    \item Obtained a C2 Certificate of Proficiency in the English language by receiving a score of over 200 points in the Cambridge Assesment Exam.
+    \item Received a C2 Certificate of Proficiency in the English language by obtaining a score of over 200 points in the Cambridge English Assessment Exam.
     \item Achieved honorable mentions in multiple mathematical logic and computational thinking contests (such as BEBRAS) throughout school years.
-    \item Participated in multiple mathematics and informatics olympiads, qualifying multiple times to the regional phase.
-    \item Won multiple championships and prizes in football, successfully coordonating and supporting my team as its captain.
+    \item Won multiple championships and prizes in football, successfully coordinating and supporting my team as its captain.
 \end{itemize*}
 
-% \hrule
-
 % \subsection*{VOLUNTEERING}
-% \vspace{1.5pt}
 
 % \begin{itemize*}
-%         \vspace{-0.5em}
 %         \item TODO
 % \end{itemize*}
 
-\hrule
-
 \subsection*{TECHNICAL SKILLS}
-\vspace{1.5pt}
 
 \begin{indentsection}{\parindent}
-\begin{description*}
-    \parskip=0.5em
-
-    \item \textbf{Programming Languages}
-    \begin{itemize*}
-        \vspace{-0.5em}
-        \item Advanced: Python, C, C++
-        \item Intermediate: Java, JavaScript/TypeScript, HTML, CSS, Shell, Prolog, CommonLisp
-    \end{itemize*}
-
-    \item \textbf{Tools}: VS Code, Jupyter Notebooks, Git, Github
-\end{description*}
+    \begin{description*}
+        \item \textbf{Programming Languages}
+        \begin{itemize*}
+            \item Intermediate: Python, C, C++, Go, Java, Javascript/Typescript, HTML, CSS/Tailwind CSS, Shell.
+        \end{itemize*}
+        \item \textbf{Tools}: VS Code, Cursor, Jupyter Notebooks, Git, Github.
+    \end{description*}
 \end{indentsection}
 
 \end{document}
