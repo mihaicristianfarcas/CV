@@ -1,0 +1,71 @@
+% --------------------
+% Career Development Plan
+% Master's admission: Cloud, Network Infrastructure and
+% High-Performance Computing, Babeș-Bolyai University
+% Author: Mihai-Cristian Farcaș
+% License: MIT
+% --------------------
+
+\documentclass[11pt,a4paper]{article}
+
+\usepackage[a4paper,margin=1in]{geometry}
+\usepackage{iftex}
+\ifPDFTeX
+    \usepackage[utf8]{inputenc}
+    \usepackage[T1]{fontenc}
+    \usepackage{textcomp}
+    \usepackage{tgpagella}
+    \usepackage[scaled]{helvet}
+    \renewcommand\familydefault{\sfdefault}
+\else
+    \usepackage{fontspec}
+    \setmainfont{TeX Gyre Heros}
+\fi
+\usepackage{xcolor}
+\usepackage{hyperref}
+\hypersetup{linkcolor=black, urlcolor=black, colorlinks=true}
+\usepackage{titlesec}
+\titleformat{\section}{\normalfont\large\bfseries}{}{0em}{}
+\titlespacing*{\section}{0pt}{1.2em}{0.5em}
+\setlength{\parskip}{0.5em}
+\setlength{\parindent}{0pt}
+\pagestyle{empty}
+
+\begin{document}
+
+\begin{center}
+    {\LARGE \textbf{Career Development Plan}} \\ \vspace{0.4em}
+    {\large Mihai-Cristian Farcaș} \\ \vspace{0.2em}
+    Candidate for the Master's Programme in \\
+    \emph{Cloud, Network Infrastructure and High-Performance Computing} \\
+    Faculty of Mathematics and Computer Science, Babeș-Bolyai University \\ \vspace{0.2em}
+    mihaicristianfarcas@gmail.com \ $\cdot$ \ mihaicristian.dev
+\end{center}
+
+\section*{Who I am and where I stand}
+
+I am a Computer Science graduate of Babeș-Bolyai University (class of 2026), and I have spent the last three years deliberately working my way down the software stack. I started, as most students do, with web applications, but the questions that kept my attention were always the ones underneath: how packets actually move, how encrypted flows can still be understood, how systems behave when they must serve many users at once. My bachelor's thesis is the clearest expression of this direction: I designed and implemented a hybrid post-quantum key exchange for WireGuard, integrating ML-KEM-768 alongside X25519 in the Noise IK handshake on top of Cloudflare's BoringTun codebase, and benchmarked the result on hardware ranging from an Apple M4 to a Raspberry Pi 5.
+
+Alongside my studies I have worked professionally on both ends of the infrastructure spectrum. As a freelance engineer I built and shipped Atlas, a retrieval-augmented generation platform for technical documents that runs multi-tenant and multilingual in daily production use, which taught me first-hand what deploying, securing and operating a real cloud service demands. In a separate research-oriented project I used eBPF to classify QUIC traffic at the kernel boundary, working in C, Rust and Python on the problem of understanding encrypted network flows without breaking them open.
+
+\section*{Why this programme, and why as my first option}
+
+I have chosen this master's programme as my first option because it is the only programme I know of that unites the three directions my work has already converged on: network infrastructure, cloud systems and high-performance computing.
+
+My thesis left me with as many questions as answers. Post-quantum handshakes are computationally heavier than classical ones; making them practical at scale is not a cryptography problem but an infrastructure one: a problem of network virtualization, of efficient parallel computation, of understanding where the cycles go on real systems. The programme's networking courses, such as network virtualization and multimedia communications over IP, speak directly to the layer where I already work. The cloud track (virtualized platforms, cloud databases, and especially cloud infrastructure and application security) formalizes what I have so far learned empirically by running Atlas in production. And the HPC component gives me what I most visibly lack: a rigorous foundation in parallel programming models and scalable algorithms, which I have only touched through benchmarking and undergraduate coursework.
+
+I am equally drawn to the programme's 30-credit innovation and entrepreneurship component. I already take on freelance work and build my own products, and I intend to keep doing so; structured training in innovation management and IT entrepreneurship converts this instinct into a method.
+
+\section*{My development plan}
+
+\textbf{During the master's (2026--2028).} I want to deepen exactly the competencies the programme is built around: administering and securing virtualized network and cloud platforms, and parallelizing large problems on scalable systems. Concretely, I plan to continue the research line opened by my thesis, the performance and deployability of post-quantum secure tunnels, and to use the programme's HPC training to study how such protocols behave under real load, on real clusters. I will keep my freelance practice running in parallel, because production systems are where theory is tested honestly.
+
+\textbf{After graduation (2028--2031).} My goal is to work as an infrastructure or systems engineer on secure network infrastructure at scale, the kind of work done by teams building VPN protocols, edge networks and cloud platforms. The transition of internet infrastructure to post-quantum cryptography will be one of the defining engineering migrations of the next decade, and I want to be one of the people carrying it out. The competencies this programme develops (network administration and security, cloud architecture, parallel computation) are precisely the qualifications that work requires.
+
+\textbf{Longer term.} I see two paths that this master's keeps open, and I value it for keeping both. One is doctoral research, if my master's research on post-quantum network infrastructure proves fruitful. The other is building a product company of my own around infrastructure tooling, for which the programme's entrepreneurship component is a deliberate preparation. In either case, the destination is the same: to build network infrastructure that is fast, secure and honest about its trade-offs.
+
+\section*{Closing}
+
+I am not applying to this programme to discover what I want to do. I am applying because I already know, and this programme is the strongest possible continuation of it. I have the systems background, the production experience and a running research question to bring with me. What I ask of the programme is depth: in networks, in cloud, in high-performance computation. What I offer in return is a student who will use every part of it.
+
+\end{document}

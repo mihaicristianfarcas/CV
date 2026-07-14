@@ -1,0 +1,107 @@
+% --------------------
+% Europass CV
+% Author: Mihai-Cristian Farcaș
+% Class: europasscv (https://ctan.org/pkg/europasscv)
+% Note: needs def/europasscv_en.def next to this file when the
+%       class definition files are not installed system-wide.
+% License: MIT
+% --------------------
+
+\documentclass[english,a4paper]{europasscv}
+\usepackage[english]{babel}
+
+% -----------------------------
+% Personal information
+% -----------------------------
+\ecvname{Mihai-Cristian Farcaș}
+\ecvaddress{Cluj-Napoca, Romania}
+\ecvmobile{+40 730 552 295}
+\ecvemail{mihaicristianfarcas@gmail.com}
+\ecvhomepage{mihaicristian.dev}
+\ecvgithubpage{github.com/mihaicristianfarcas}
+\ecvlinkedinpage{linkedin.com/in/mihaicristianfarcas}
+\ecvdateofbirth{5 April 2004}
+\ecvnationality{Romanian}
+
+% Photo is picked up automatically once photo.jpg (or photo.png) exists here
+\IfFileExists{photo.jpg}
+    {\ecvpicture[width=3cm]{photo.jpg}}
+    {\IfFileExists{photo.png}{\ecvpicture[width=3cm]{photo.png}}{}}
+
+\begin{document}
+\begin{europasscv}
+
+\ecvpersonalinfo
+
+% -----------------------------
+% Work experience
+% -----------------------------
+\ecvsection{Work experience}
+
+\ecvtitle{2026 -- Present}{Software Engineer (Freelance), BluePlan}
+\ecvitem{}{Built and shipped Atlas (ai.blueplan.ro) end to end: retrieval-augmented chat over technical documents with hybrid dense, sparse and image retrieval fused with RRF, reranking and verbatim citations pinned to the source PDF. Multi-tenant, multilingual and in daily production use.}
+\ecvitem{}{\ecvhighlight{Technologies}\quad Python, FastAPI, Qdrant, React}
+
+\ecvtitle{2026}{Full-Stack Developer, Baseline Studios}
+\ecvitem{}{Delivered full-stack features across multiple client applications (stratosphere.vip, pursuitofx.org, kabu.xyz) using TypeScript and React.}
+
+\ecvtitle{2025}{Software Developer, GeoDraw}
+\ecvitem{}{Developed an AI-powered canvas for sketching and wireframing apps with React, TLDraw and LLM APIs, turning natural language into accurate real-time design output on the canvas.}
+
+\ecvtitle{April -- June 2025}{Software Development Intern, Tvarita}
+\ecvitem{}{Rebuilt and redesigned a server monitoring site for an optician clinic chain using React and Tailwind CSS, improving the user experience and significantly reducing load times.}
+
+% -----------------------------
+% Education
+% -----------------------------
+\ecvsection{Education and training}
+
+\ecvtitle{Oct 2023 -- June 2026}{BSc in Computer Science (English)}
+\ecvitem{}{Babeș-Bolyai University, Faculty of Mathematics and Computer Science, Cluj-Napoca, Romania}
+\ecvitem{}{Thesis: Hybrid post-quantum key exchange for WireGuard, the first FIPS 203-compliant hybrid WireGuard implementation on a production Rust codebase.}
+
+% -----------------------------
+% Personal projects
+% -----------------------------
+\ecvsection{Personal projects}
+
+\ecvtitle{2026}{pq-boringtun}
+\ecvitem{}{Hybrid post-quantum key exchange for WireGuard: ML-KEM-768 alongside X25519 in the Noise IK handshake, built in Rust on Cloudflare's BoringTun and benchmarked on Apple M4 and Raspberry Pi 5. \newline github.com/mihaicristianfarcas/pq-boringtun}
+
+\ecvtitle{2026}{Supernova}
+\ecvitem{}{Live-wallpaper engine for macOS in Swift 6: renders looping video, Shadertoy-style GLSL shaders transpiled to Metal and sandboxed web bundles behind desktop icons, with audio, cursor and motion reactivity, per-display assignment and smart playlists. \newline supernova-macos.vercel.app}
+
+\ecvtitle{2026}{eBPF Network Analysis System}
+\ecvitem{}{Network traffic classification for QUIC protocols, inspecting encrypted flows at the kernel boundary using eBPF with C, Rust and Python. \newline github.com/mihaicristianfarcas/ebpf-network-analysis-system}
+
+\ecvtitle{2026}{nvim-search-and-replace}
+\ecvitem{}{Project-wide search and replace plugin for Neovim written in Lua: async streaming ripgrep search, live before/after preview, selective replacement and its own undo/redo stack. \newline github.com/mihaicristianfarcas/nvim-search-and-replace}
+
+% -----------------------------
+% Personal skills
+% -----------------------------
+\ecvsection{Personal skills}
+
+\ecvmothertongue{Romanian}
+
+\ecvlanguageheader
+\ecvlastlanguage{English}{C2}{C2}{C2}{C2}{C2}
+\ecvlanguagecertificate{C2 Certificate of Proficiency in English (Cambridge English Assessment)}
+\ecvlanguagefooter
+
+\ecvblueitem{Digital skills}{
+\begin{ecvitemize}
+    \item Programming languages: Rust, Go, Python, Swift, C/C++, Java, TypeScript/JavaScript, Lua, Shell
+    \item Technologies and tools: React, Next.js, Astro, Tailwind CSS, FastAPI, PyTorch, LangChain, Qdrant, FAISS, PostgreSQL, eBPF, Metal, Git, Neovim, Cloudflare Workers
+\end{ecvitemize}
+}
+
+% -----------------------------
+% Additional information
+% -----------------------------
+\ecvsection{Additional information}
+
+\ecvblueitem{Honours and awards}{Honorable mentions in multiple mathematical logic and computational thinking contests (e.g. BEBRAS).}
+
+\end{europasscv}
+\end{document}
