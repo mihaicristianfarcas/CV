@@ -32,6 +32,9 @@
 \setlist[enumerate]{noitemsep, topsep=0.4em, leftmargin=*}
 \setlength{\parskip}{0pt}
 
+% Line spacing
+\linespread{1.06}
+
 % -----------------------------
 % Fonts and colors
 % -----------------------------
@@ -92,13 +95,20 @@
     \ \faicon{at} \href{mailto:mihaicristianfarcas@gmail.com}{mihaicristianfarcas@gmail.com}
     \ \faicon{globe} \href{https://mihaicristian.dev}{mihaicristian.dev}
     \ \faicon{github} \href{https://github.com/mihaicristianfarcas}{github.com/mihaicristianfarcas}
-    \ \faicon{linkedin} \href{https://www.linkedin.com/in/mihai-cristian-farcaș-6660542a6/}{linkedin.com/in/mihai-cristian-farcaș-6660542a6}
+    \ \faicon{linkedin} \href{https://www.linkedin.com/in/mihai-cristian-farcas-6660542a6/}{linkedin.com/in/mihai-cristian-farcas-6660542a6}
 \end{center}
 
 \vspace{-1em}
 
 \subsection*{EDUCATION}
 \begin{itemize}[leftmargin=*]
+    \item
+    \headerrow
+        {\textbf{Babeș-Bolyai University}}
+        {\textbf{Cluj-Napoca, Romania}}
+    \headerrow
+        {\emph{MSc in Cloud, Network Infrastructure and High-Performance Computation}}
+        {\emph{2026 - Present}}
     \item
     \headerrow
         {\textbf{Babeș-Bolyai University}}
@@ -132,7 +142,8 @@
         {\emph{Client Applications}}
         {\emph{2026}}
     \begin{itemize*}
-        \item Delivered full-stack features across multiple client applications (stratosphere.vip, pursuitofx.org, kabu.xyz) using TypeScript and React.
+        \item Delivered full-stack features across multiple client applications (\href{https://stratosphere.vip}{stratosphere.vip}, \href{https://pursuitofx.org}{pursuitofx.org}, \href{https://kabu.xyz}{kabu.xyz}, \href{https://esoftplus-landing.vercel.app}{esoftplus-landing.vercel.app}) using TypeScript and React.
+        \item \textbf{Technologies}: TypeScript, React.
     \end{itemize*}
     \item
     \headerrow
@@ -143,6 +154,7 @@
         {\emph{2025}}
     \begin{itemize*}
         \item Developed an AI-powered canvas for sketching and wireframing apps with React, TLDraw and LLM APIs, turning natural language into accurate real-time design output on the canvas.
+        \item \textbf{Technologies}: React, TLDraw, LLM APIs.
     \end{itemize*}
     \item
     \headerrow
@@ -153,6 +165,7 @@
         {\emph{April - June 2025}}
     \begin{itemize*}
         \item Rebuilt and redesigned a server monitoring site for an optician clinic chain using React and Tailwind CSS, improving the user experience and significantly reducing load times.
+        \item \textbf{Technologies}: React, Tailwind CSS.
     \end{itemize*}
 \end{itemize}
 
@@ -165,6 +178,7 @@
         {\textbf{2026}}
     \begin{itemize*}
         \item Hybrid post-quantum key exchange for WireGuard: ML-KEM-768 alongside X25519 in the Noise IK handshake, built in Rust on Cloudflare's BoringTun and benchmarked on Apple M4 and Raspberry Pi 5.
+        \item \textbf{Technologies}: Rust, ML-KEM-768, X25519, Noise Protocol, WireGuard.
     \end{itemize*}
     \item
     \headerrow
@@ -172,6 +186,15 @@
         {\textbf{2026}}
     \begin{itemize*}
         \item Live-wallpaper engine for macOS in Swift 6: renders looping video, Shadertoy-style GLSL shaders transpiled to Metal and sandboxed web bundles behind desktop icons, with audio, cursor and motion reactivity, per-display assignment and smart playlists.
+        \item \textbf{Technologies}: Swift 6, Metal, Core Audio, GLSL.
+    \end{itemize*}
+    \item
+    \headerrow
+        {\textbf{\href{https://mihaicristian.dev}{mihaicristian.dev}}}
+        {\textbf{2026}}
+    \begin{itemize*}
+        \item Bilingual (EN/RO) personal portfolio site built with Astro: project showcases, long-form writing and a performance-focused SPA-style browsing experience.
+        \item \textbf{Technologies}: Astro, TypeScript.
     \end{itemize*}
     \item
     \headerrow
@@ -179,6 +202,7 @@
         {\textbf{2025}}
     \begin{itemize*}
         \item Network traffic classification for QUIC protocols, inspecting encrypted flows at the kernel boundary using eBPF with C, Rust and Python.
+        \item \textbf{Technologies}: C, Rust, Python, eBPF.
     \end{itemize*}
     \item
     \headerrow
@@ -186,15 +210,9 @@
         {\textbf{2025}}
     \begin{itemize*}
         \item Project-wide search and replace plugin for Neovim written in Lua: async streaming ripgrep search, live before/after preview, selective replacement and its own undo/redo stack.
+        \item \textbf{Technologies}: Lua, Neovim, ripgrep.
     \end{itemize*}
 \end{itemize}
-
-\subsection*{AWARDS AND CERTIFICATIONS}
-
-\begin{itemize*}
-    \item C2 Certificate of Proficiency in English (Cambridge English Assessment).
-    \item Honorable mentions in multiple mathematical logic and computational thinking contests (e.g. BEBRAS).
-\end{itemize*}
 
 \subsection*{TECHNICAL SKILLS}
 
@@ -202,7 +220,13 @@
     \begin{description*}
         \item \textbf{Programming Languages}: Rust, Go, Python, Swift, C/C++, Java, TypeScript/JavaScript, Lua, Shell.
         \vspace{0.2em}
-        \item \textbf{Technologies \& Tools}: React, Next.js, Astro, Tailwind CSS, FastAPI, PyTorch, LangChain, Qdrant, FAISS, PostgreSQL, eBPF, Metal, Git, Neovim, Cloudflare Workers.
+        \item \textbf{Web Development}: React, Next.js, Astro, Tailwind CSS, TLDraw, Vercel, Cloudflare Workers.
+        \vspace{0.2em}
+        \item \textbf{Backend, Databases \& ML}: FastAPI, PostgreSQL, Qdrant, FAISS, LangChain, PyTorch, LLM APIs.
+        \vspace{0.2em}
+        \item \textbf{Systems, Networking \& Security}: eBPF, WireGuard, Noise Protocol, ML-KEM, Metal, Core Audio, GLSL shaders.
+        \vspace{0.2em}
+        \item \textbf{Tools}: Git, Neovim, ripgrep, Linux, macOS.
     \end{description*}
 \end{indentsection}
 
