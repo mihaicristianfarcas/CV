@@ -9,6 +9,7 @@
 
 \documentclass[english,a4paper]{europasscv}
 \usepackage[english]{babel}
+\usepackage{needspace}
 
 % -----------------------------
 % Personal information
@@ -39,7 +40,7 @@
 \ecvsection{Work experience}
 
 \ecvtitle{2026 -- Present}{Software Engineer (Freelance), BluePlan}
-\ecvitem{}{Built and shipped Atlas (ai.blueplan.ro) end to end: retrieval-augmented chat over technical documents with hybrid dense, sparse and image retrieval fused with RRF, reranking and verbatim citations pinned to the source PDF. Multi-tenant, multilingual and in daily production use.}
+\ecvitem{}{Built and shipped Atlas (\href{https://blueplan.vercel.app}{blueplan.vercel.app}) end to end: retrieval-augmented chat over technical documents with hybrid dense, sparse and image retrieval fused with RRF, reranking and verbatim citations pinned to the source PDF. Multi-tenant, multilingual and in daily production use.}
 \ecvitem{}{\ecvhighlight{Technologies}\quad Python, FastAPI, Qdrant, React}
 
 \ecvtitle{2026}{Full-Stack Developer, Baseline Studios}
@@ -69,24 +70,40 @@
 % -----------------------------
 % Personal projects
 % -----------------------------
+\newpage
 \ecvsection{Personal projects}
 
+\needspace{7\baselineskip}
+\ecvtitle{2026}{Helio}
+\ecvitem{}{Open-source remote desktop and game streaming over a post-quantum WireGuard tunnel: one native app acts as client and host on macOS, Windows and Linux, with ML-KEM-768 encryption, NAT traversal through the BitTorrent DHT, Reed-Solomon loss recovery and HDR video at up to 120 fps. \newline \href{https://helio.mihaicristian.dev}{helio.mihaicristian.dev}}
+\ecvitem{}{\ecvhighlight{Technologies}\quad Rust, GPUI, ML-KEM-768, WireGuard, AV1/HEVC}
+
+\needspace{7\baselineskip}
+\ecvtitle{2026}{Atlas}
+\ecvitem{}{AI assistant for technical documents (PDF, Word, presentations and e-books) that answers in the user's language with every claim tied to a citation opening the exact highlighted passage; hybrid dense, sparse and image retrieval with RRF fusion and reranking, multi-tenant and in daily production. \newline \href{https://atlas-ai.ro}{atlas-ai.ro}}
+\ecvitem{}{\ecvhighlight{Technologies}\quad Python, FastAPI, Qdrant, React, LLM APIs}
+
+\needspace{7\baselineskip}
+\ecvtitle{2026}{asides}
+\ecvitem{}{Screen-annotation tool for reporting bugs out loud: freeze any app, pin what is wrong and say why; local Whisper transcription types the aside into a coding agent's chat as a message with the annotated screenshot and measured geometry. \newline \href{https://asides.mihaicristian.dev}{asides.mihaicristian.dev}}
+\ecvitem{}{\ecvhighlight{Technologies}\quad Rust, GPUI, Whisper, MCP}
+
+\needspace{7\baselineskip}
 \ecvtitle{2026}{pq-boringtun}
 \ecvitem{}{Hybrid post-quantum key exchange for WireGuard: ML-KEM-768 alongside X25519 in the Noise IK handshake, built in Rust on Cloudflare's BoringTun and benchmarked on Apple M4 and Raspberry Pi 5. \newline \href{https://github.com/mihaicristianfarcas/pq-boringtun}{github.com/mihaicristianfarcas/pq-boringtun}}
 \ecvitem{}{\ecvhighlight{Technologies}\quad Rust, ML-KEM-768, X25519, Noise Protocol, WireGuard}
 
+\needspace{7\baselineskip}
 \ecvtitle{2026}{Supernova}
-\ecvitem{}{Live-wallpaper engine for macOS in Swift 6: renders looping video, Shadertoy-style GLSL shaders transpiled to Metal and sandboxed web bundles behind desktop icons, with audio, cursor and motion reactivity, per-display assignment and smart playlists. \newline \href{https://supernova.mihaicristian.dev}{supernova.mihaicristian.dev}}
-\ecvitem{}{\ecvhighlight{Technologies}\quad Swift 6, Metal, Core Audio, GLSL}
+\ecvitem{}{Live-wallpaper engine for macOS in Swift 6: renders looping video and sandboxed web bundles behind desktop icons, with audio, cursor and motion reactivity, per-display assignment and smart playlists. \newline \href{https://supernova.mihaicristian.dev}{supernova.mihaicristian.dev}}
+\ecvitem{}{\ecvhighlight{Technologies}\quad Swift 6, Metal, Core Audio}
 
-\ecvtitle{2026}{mihaicristian.dev}
-\ecvitem{}{Bilingual (EN/RO) personal portfolio site built with Astro: project showcases, long-form writing and a performance-focused SPA-style browsing experience. \newline \href{https://mihaicristian.dev}{mihaicristian.dev}}
-\ecvitem{}{\ecvhighlight{Technologies}\quad Astro, TypeScript}
-
+\needspace{7\baselineskip}
 \ecvtitle{2025}{eBPF Network Analysis System}
 \ecvitem{}{Network traffic classification for QUIC protocols, inspecting encrypted flows at the kernel boundary using eBPF with C, Rust and Python. \newline \href{https://github.com/mihaicristianfarcas/ebpf-network-analysis-system}{github.com/mihaicristianfarcas/ebpf-network-analysis-system}}
 \ecvitem{}{\ecvhighlight{Technologies}\quad C, Rust, Python, eBPF}
 
+\needspace{7\baselineskip}
 \ecvtitle{2025}{nvim-search-and-replace}
 \ecvitem{}{Project-wide search and replace plugin for Neovim written in Lua: async streaming ripgrep search, live before/after preview, selective replacement and its own undo/redo stack. \newline \href{https://github.com/mihaicristianfarcas/nvim-search-and-replace}{github.com/mihaicristianfarcas/nvim-search-and-replace}}
 \ecvitem{}{\ecvhighlight{Technologies}\quad Lua, Neovim, ripgrep}
@@ -94,6 +111,7 @@
 % -----------------------------
 % Personal skills
 % -----------------------------
+\newpage
 \ecvsection{Personal skills}
 
 \ecvmothertongue{Romanian}
@@ -105,11 +123,12 @@
 
 \ecvblueitem{Digital skills}{
 \begin{ecvitemize}
-    \item Programming languages: Rust, Go, Python, Swift, C/C++, Java, TypeScript/JavaScript, Lua, Shell
-    \item Web development: React, Next.js, Astro, Tailwind CSS, TLDraw, Vercel, Cloudflare Workers
-    \item Backend, databases and ML: FastAPI, PostgreSQL, Qdrant, FAISS, LangChain, PyTorch, LLM APIs
-    \item Systems, networking and security: eBPF, WireGuard and the Noise protocol, ML-KEM post-quantum key exchange, Metal, Core Audio, GLSL shaders
-    \item Tools: Git, Neovim, ripgrep, Linux, macOS
+    \item Programming languages: Rust, Go, Python, Swift, C/C++, TypeScript/JavaScript, Lua, Shell
+    \item Frontend: React, Next.js, Astro, Tailwind CSS, TLDraw, GPUI, Vercel, Cloudflare Workers
+    \item Backend and data: FastAPI, PostgreSQL, Qdrant, FAISS, LangChain, PyTorch, LLM APIs
+    \item AI and retrieval: RAG, hybrid dense/sparse/image retrieval, RRF fusion, reranking, citation grounding, Whisper, MCP
+    \item Systems, networking and security: eBPF, WireGuard and the Noise protocol, ML-KEM-768 post-quantum key exchange, NAT traversal, BitTorrent DHT, Reed-Solomon FEC, Metal, Core Audio
+    \item Tools and platforms: Git, Neovim, ripgrep, Linux, macOS, Windows
 \end{ecvitemize}
 }
 
